@@ -8,10 +8,9 @@
 
 Inside 'jacques-machine'
 
-  gem build jacques-machine.gemspec
+	gem build jacques-machine.gemspec
 
 With the resulting .gem file, do
 
-  gem install jacques-machine-0.0.x.gem
-
+	gem install jacques-machine-0.0.x.gem
 

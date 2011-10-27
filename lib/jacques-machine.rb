@@ -23,5 +23,5 @@ module JacquesMachine
 
 end
 
-puts "Hi, my name is Jacques! What is yours?"
-JacquesMachine::interactive
+#puts "Hi, my name is Jacques! What is yours?"
+#JacquesMachine::interactive

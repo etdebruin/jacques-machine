@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'jacques-machine/cli'
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'lib', 'jacques-machine', 'cli.rb'))
 
 JacquesMachine::Cli.run ARGV
