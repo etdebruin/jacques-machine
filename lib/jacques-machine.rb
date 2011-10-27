@@ -1,3 +1,6 @@
+require File.expand_path(File.join(File.dirname(__FILE__), 'jacques-machine', 'configuration.rb'))
+require File.expand_path(File.join(File.dirname(__FILE__), 'jacques-machine', 'campfire.rb'))
+
 require 'naturalingo'
 
 module JacquesMachine
@@ -5,7 +8,7 @@ module JacquesMachine
   def self.interactive
     print "jacques-machine > "
     interpret(gets.strip)    
-  end 
+  end
 
   def self.interpret(something)
     unless command(something)
