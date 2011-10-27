@@ -1,6 +1,6 @@
 require 'naturalingo'
 
-class JacquesMachine
+module JacquesMachine
 
   def self.interactive
     print "jacques-machine > "
