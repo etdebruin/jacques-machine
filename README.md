@@ -14,3 +14,6 @@ With the resulting .gem file, do
 
 	gem install jacques-machine-0.0.x.gem
 
+## Thank you's
+
+I have to thank [Alex Reisner](http://github.com/alexreisner) whom I met at RubyConf '11.  His elegant '[geocoder](http://github.com/alexreisner/geocoder)' served as wonderful reading material as I got my basic framework layed out.

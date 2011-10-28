@@ -2,6 +2,7 @@ require 'tinder'
 require 'pp'
 
 module JacquesMachine
+
   class Campfire
     def self.join
       campfire = Tinder::Campfire.new Configuration.campfire_subdomain, :token => Configuration.campfire_key
@@ -11,9 +12,10 @@ module JacquesMachine
 
     def self.listen(room)
       room.listen do |m|
-        pp m
-        room.speak "You said: #{m[:body]}" if m[:user][:id] == 282550
+        #pp m
+        room.speak "My Father says: #{m[:body]}" if m[:user][:id] == 282550
       end
     end
   end
+
 end
