@@ -21,6 +21,11 @@ module JacquesMachine
           JacquesMachine::Configuration.campfire_room = room
         end
 
+        opts.on("-s <subdomain>", "--subdomain <subdomain>",
+          "Join Campfire using <subdomain>") do |subdomain|
+          JacquesMachine::Configuration.campfire_subdomain = subdomain
+        end
+
         opts.on("-i", "--interactive",
           "Run in interactive mode on the command line") do
           JacquesMachine::interactive
@@ -44,7 +49,8 @@ module JacquesMachine
       
       query = args.join(" ")
 
-      if Configuration.campfire_key && Configuration.campfire_room
+      if Configuration.campfire_key && Configuration.campfire_room && Configuration.campfire_subdomain
+        puts "Joining Campfire..."
         JacquesMachine::Campfire.join
       end
 

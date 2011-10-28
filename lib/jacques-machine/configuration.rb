@@ -3,6 +3,7 @@ module JacquesMachine
     def self.options_and_defaults
       [
         [:campfire_key, nil],
+        [:campfire_subdomain, nil],
         [:campfire_room, nil]
       ]
     end
