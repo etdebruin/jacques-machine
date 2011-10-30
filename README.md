@@ -2,6 +2,8 @@
 
 (a work in progress, no point in cloning or forking at this point)
 
+Jacques Machine relies on the [Naturalingo](http://github.com/etdebruin/Naturalingo) gem.
+
 ## For Developers
 
 (but mainly so I can remember)
