@@ -8,7 +8,7 @@ class CommandLine < OutputInterface
     print "jacques-machine > "
   end
 
-  def say(something)
+  def out(something)
     puts something
   end
 end
