@@ -18,7 +18,7 @@ module JacquesMachine
 
   def self.interpret(something)
     unless command(something)
-      response = Naturalingo::said_what(something)
+      response = Naturalingo::heard(something)
       @output.out(response)
     end
     interactive
