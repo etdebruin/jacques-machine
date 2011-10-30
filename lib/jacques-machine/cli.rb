@@ -2,10 +2,8 @@ require 'optparse'
 require File.expand_path(File.join(File.dirname(__FILE__), '..', 'jacques-machine.rb'))
 
 module JacquesMachine
-
   class Cli
-    def self.run(args, out = STDOUT)
-      #JacquesMachine::interactive
+    def self.run(args)
 
       OptionParser.new{ |opts|
         opts.banner = "Usage:\n    jacques-machine [options]"
@@ -28,7 +26,7 @@ module JacquesMachine
 
         opts.on("-i", "--interactive",
           "Run in interactive mode on the command line") do
-          JacquesMachine::interactive
+          JacquesMachine::Configuration.output = CommandLine.new
         end
 
         opts.on_tail("-v", "--version", "Print version number") do
@@ -51,13 +49,18 @@ module JacquesMachine
 
       if Configuration.campfire_key && Configuration.campfire_room && Configuration.campfire_subdomain
         puts "Joining Campfire..."
-        JacquesMachine::Campfire.join
+        Configuration.output = Campfire.new(Configuration.campfire_key, Configuration.campfire_room, Configuration.campfire_subdomain)
       end
 
-      if query == ""
+      if Configuration.output
+        JacquesMachine::output = Configuration.output
+        JacquesMachine::interactive
+      end
+
+      if query == " "
+        "Pick something dude?"
       end
 
     end
   end
-
 end
