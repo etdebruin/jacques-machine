@@ -3,7 +3,7 @@ require File.expand_path(File.join(File.dirname(__FILE__), '..', 'jacques-machin
 
 module JacquesMachine
   class Cli
-    def self.run(args)
+    def self.run(args, out = STDOUT)
 
       OptionParser.new{ |opts|
         opts.banner = "Usage:\n    jacques-machine [options]"
@@ -29,16 +29,16 @@ module JacquesMachine
           JacquesMachine::Configuration.audience = CommandLine.new
         end
 
-        opts.on_tail("-v", "--version", "Print version number") do
-          require "jacques-machine/version"
-          out << "Jacques-Machine #{JacquesMachine::VERSION}\n"
-          exit
-        end
+        # opts.on_tail("-v", "--version", "Print version number") do
+        #   require "jacques-machine/version"
+        #   out << "Jacques-Machine #{JacquesMachine::VERSION}\n"
+        #   exit
+        # end
 
         opts.on_tail("-h", "--help", "Print this help") do
           out << "A machine can be a person.\n\n"
           out << opts
-          out << "\nCreated and maintained by Etienne de Bruin, available under the MIT License.\n"
+          out << "\nCreated and maintained by Etienne de Bruin, at this point please don't redistribute.\n"
           out << "Report bugs and contribute at http://github.com/etdebruin/Jacques-Machine\n"
           exit
         end

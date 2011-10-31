@@ -1,7 +1,8 @@
-class CommandLine < OutputInterface
+class CommandLine
+  include BaseInterface
   
   def initialize
-    puts "Welcome to the Jacques-Machine(tm)"
+    puts "Hi, my name is Jacques Machine!"
   end
 
   def prompt

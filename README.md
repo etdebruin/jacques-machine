@@ -2,11 +2,16 @@
 
 (a work in progress, no point in cloning or forking at this point)
 
-Jacques Machine relies on the [Naturalingo](http://github.com/etdebruin/Naturalingo) gem.
+Jacques Machine relies on [Naturalingo](http://github.com/etdebruin/Naturalingo).
 
 ## Getting Started
 
+Take a look at the command line options:
 
+  ./bin/jacques-machine -h
+
+At this point there is a terminal and [Campfire chat](http://campfirenow.com/) interface both which are detailed
+in the help.
 
 ## For Developers
 

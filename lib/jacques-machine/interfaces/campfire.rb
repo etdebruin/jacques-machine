@@ -1,7 +1,8 @@
 require 'tinder'
 require 'pp'
 
-class Campfire < OutputInterface
+class Campfire
+  include BaseInterface
 
   def initialize(key, room, subdomain)
     campfire = Tinder::Campfire.new subdomain, :token => key

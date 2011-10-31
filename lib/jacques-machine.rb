@@ -1,9 +1,10 @@
 require File.expand_path(File.join(File.dirname(__FILE__), 'jacques-machine', 'configuration.rb'))
-require File.expand_path(File.join(File.dirname(__FILE__), 'jacques-machine', 'interfaces', 'interface.rb'))
+require File.expand_path(File.join(File.dirname(__FILE__), 'jacques-machine', 'interfaces', 'base_interface.rb'))
 require File.expand_path(File.join(File.dirname(__FILE__), 'jacques-machine', 'interfaces', 'campfire.rb'))
 require File.expand_path(File.join(File.dirname(__FILE__), 'jacques-machine', 'interfaces', 'commandline.rb'))
 
-require 'naturalingo'
+#require 'naturalingo'
+require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'naturalingo', 'lib', 'naturalingo.rb'))
 
 module JacquesMachine
 
