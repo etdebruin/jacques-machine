@@ -4,6 +4,10 @@
 
 Jacques Machine relies on the [Naturalingo](http://github.com/etdebruin/Naturalingo) gem.
 
+## Getting Started
+
+
+
 ## For Developers
 
 (but mainly so I can remember)

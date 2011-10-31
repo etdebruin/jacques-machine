@@ -12,8 +12,7 @@ module JacquesMachine
   end
 
   def self.interactive
-    @output.prompt
-    interpret(gets.strip)    
+    @output.interact
   end
 
   def self.interpret(something)
@@ -21,7 +20,6 @@ module JacquesMachine
       response = Naturalingo::heard(something)
       @output.out(response)
     end
-    interactive
   end
 
   def self.command(input)

@@ -48,7 +48,7 @@ module JacquesMachine
       query = args.join(" ")
 
       if Configuration.campfire_key && Configuration.campfire_room && Configuration.campfire_subdomain
-        puts "Joining Campfire..."
+        puts "Joining Campfire"
         Configuration.output = Campfire.new(Configuration.campfire_key, Configuration.campfire_room, Configuration.campfire_subdomain)
       end
 
