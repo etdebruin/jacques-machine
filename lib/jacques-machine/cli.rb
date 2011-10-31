@@ -26,7 +26,7 @@ module JacquesMachine
 
         opts.on("-i", "--interactive",
           "Run in interactive mode on the command line") do
-          JacquesMachine::Configuration.output = CommandLine.new
+          JacquesMachine::Configuration.audience = CommandLine.new
         end
 
         opts.on_tail("-v", "--version", "Print version number") do
@@ -49,12 +49,12 @@ module JacquesMachine
 
       if Configuration.campfire_key && Configuration.campfire_room && Configuration.campfire_subdomain
         puts "Joining Campfire"
-        Configuration.output = Campfire.new(Configuration.campfire_key, Configuration.campfire_room, Configuration.campfire_subdomain)
+        Configuration.audience = Campfire.new(Configuration.campfire_key, Configuration.campfire_room, Configuration.campfire_subdomain)
       end
 
-      if Configuration.output
-        JacquesMachine::output = Configuration.output
-        JacquesMachine::interactive
+      if Configuration.audience
+        JacquesMachine::audience = Configuration.audience
+        JacquesMachine::converse
       end
 
       if query == " "

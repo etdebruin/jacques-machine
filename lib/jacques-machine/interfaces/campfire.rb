@@ -12,17 +12,18 @@ class Campfire < OutputInterface
     # no prompt required
   end
 
-  def interact
+  def listen_to
     @room.listen do |m|
       pp m
       if m[:type] == 'TextMessage'
-        JacquesMachine::interpret(m[:body]) if m[:user][:id] == 282550
+        # strictly speaking, we should not have these if's because the JacquesMachine should be able to handle this
+        JacquesMachine::comprehend(m[:body]) if m[:body] =~ /Jacques/i && m[:user][:name] != 'Jacques Machine'
       end
     end
   end
 
-  def out(something)
-    @room.speak something
+  def speak_to(words)
+    @room.speak words
   end
 
 end

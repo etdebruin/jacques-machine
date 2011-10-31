@@ -7,24 +7,24 @@ require 'naturalingo'
 
 module JacquesMachine
 
-  def self.output=(selected_output)
-    @output = selected_output
+  def self.audience=(audience)
+    @audience = audience
   end
 
-  def self.interactive
-    @output.interact
+  def self.converse
+    @audience.listen_to
   end
 
-  def self.interpret(something)
-    unless command(something)
-      response = Naturalingo::heard(something)
-      @output.out(response)
+  def self.comprehend(sentence)
+    unless command(sentence)
+      response = Naturalingo::heard(sentence)
+      @audience.speak_to(response)
     end
   end
 
   def self.command(input)
     if input.to_s.downcase == 'exit'
-      @output.out("Goodbye!")
+      @audience.speak_to("Goodbye!")
       Process.exit
     end
   end

@@ -6,7 +6,10 @@ class OutputInterface
   def prompt
   end
 
-  def out(something)
+  def listen_to
+  end
+
+  def speak_to(something)
   end
 
 end

@@ -8,14 +8,14 @@ class CommandLine < OutputInterface
     print "jacques-machine > "
   end
 
-  def interact
+  def listen_to
     while true
       prompt
-      JacquesMachine::interpret(gets.strip)
+      JacquesMachine::comprehend(gets.strip)
     end
   end
 
-  def out(something)
+  def speak_to(something)
     puts something
   end
 

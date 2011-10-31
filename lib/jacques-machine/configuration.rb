@@ -5,7 +5,7 @@ module JacquesMachine
         [:campfire_key, nil],
         [:campfire_subdomain, nil],
         [:campfire_room, nil],
-        [:output, nil]
+        [:audience, nil]
       ]
     end
 
