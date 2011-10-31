@@ -28,3 +28,7 @@ With the resulting .gem file, do
 ## Thank you's
 
 I have to thank [Alex Reisner](http://github.com/alexreisner) whom I met at RubyConf '11.  His elegant '[geocoder](http://github.com/alexreisner/geocoder)' served as wonderful reading material as I got my basic framework layed out.
+
+[Matt Aimonetti](http://github.com/mattetti)
+
+[Rob Kaufman](http://github.com/notch8)
