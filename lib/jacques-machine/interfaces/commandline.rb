@@ -19,5 +19,4 @@ class CommandLine
   def speak_to(something)
     puts something
   end
-
 end

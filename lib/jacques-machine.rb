@@ -7,23 +7,22 @@ require File.expand_path(File.join(File.dirname(__FILE__), 'jacques-machine', 'i
 require File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'naturalingo', 'lib', 'naturalingo.rb'))
 
 module JacquesMachine
+  extend self
 
-  def self.audience=(audience)
+  def audience=(audience)
     @audience = audience
   end
 
-  def self.converse
+  def converse
     @audience.listen_to
   end
 
-  def self.comprehend(sentence)
-    unless command(sentence)
-      response = Naturalingo::heard(sentence)
-      @audience.speak_to(response)
-    end
+  def comprehend(sentences)
+    response = Naturalingo::heard(sentences)
+    @audience.speak_to(response) unless response.nil?
   end
 
-  def self.command(input)
+  def command(input)
     if input.to_s.downcase == 'exit'
       @audience.speak_to("Goodbye!")
       Process.exit

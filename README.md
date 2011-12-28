@@ -29,6 +29,6 @@ With the resulting .gem file, do
 
 I have to thank [Alex Reisner](http://github.com/alexreisner) whom I met at RubyConf '11.  His elegant '[geocoder](http://github.com/alexreisner/geocoder)' served as wonderful reading material as I got my basic framework layed out.
 
-[Matt Aimonetti](http://github.com/mattetti)
+Thanks be to [Matt Aimonetti](http://github.com/mattetti) for constantly rewriting my code but more importantly his willingness to do so :)
 
-[Rob Kaufman](http://github.com/notch8)
+[Rob Kaufman](http://github.com/notch8) is walking reference manual.  On *anything*.

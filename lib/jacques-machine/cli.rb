@@ -29,6 +29,11 @@ module JacquesMachine
           JacquesMachine::Configuration.audience = CommandLine.new
         end
 
+        opts.on("-d", "--debug",
+          "Run in debug mode, more verbose") do
+          JacquesMachine::Configuration.debug = true
+        end
+
         # opts.on_tail("-v", "--version", "Print version number") do
         #   require "jacques-machine/version"
         #   out << "Jacques-Machine #{JacquesMachine::VERSION}\n"
@@ -57,7 +62,7 @@ module JacquesMachine
         JacquesMachine::converse
       end
 
-      if query == " "
+      if query == ""
         "Pick something dude?"
       end
 

@@ -17,8 +17,8 @@ class Campfire
     @room.listen do |m|
       pp m
       if m[:type] == 'TextMessage'
-        # strictly speaking, we should not have these if's because the JacquesMachine should be able to handle this
-        JacquesMachine::comprehend(m[:body]) if m[:body] =~ /Jacques/i && m[:user][:name] != 'Jacques Machine'
+        # Don't let Jacques try to comprehend his own messages
+        JacquesMachine::comprehend(m[:body]) if m[:user][:name] != 'Jacques Machine'
       end
     end
   end
