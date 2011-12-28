@@ -2,11 +2,15 @@ class CommandLine
   include BaseInterface
   
   def initialize
-    puts "Hi, my name is Jacques Machine!"
+    puts "Hi, my name is Jacques Machine!  Talk to me."
+  end
+
+  def does_not_require_salutation?
+    true
   end
 
   def prompt
-    print "jacques-machine > "
+    print "> "
   end
 
   def listen_to

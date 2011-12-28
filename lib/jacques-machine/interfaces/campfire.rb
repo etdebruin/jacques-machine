@@ -9,6 +9,10 @@ class Campfire
     @room = campfire.find_room_by_name room
   end
 
+  def does_not_require_salutation?
+    false
+  end
+
   def prompt
     # no prompt required
   end

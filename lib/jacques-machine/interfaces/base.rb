@@ -1,5 +1,9 @@
 module BaseInterface
 
+  def require_salutation?
+    raise "Your interface #{self.class.name} method is not yet implemented."
+  end
+
   def prompt
     raise "Your interface #{self.class.name} method is not yet implemented."
   end
