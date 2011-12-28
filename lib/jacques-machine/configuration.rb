@@ -6,6 +6,7 @@ module JacquesMachine
         [:campfire_subdomain, nil],
         [:campfire_room, nil],
         [:audience, nil],
+        [:invoke, Hash.new],
         [:debug, false]
       ]
     end

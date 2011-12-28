@@ -20,15 +20,27 @@ module JacquesMachine
   end
 
   def comprehend(sentences)
-    lingo = Natural::Lingo.new(@names)
-    lingo.heard=sentences
+    @lingo = Natural::Lingo.new(@names)
+    @lingo.heard=sentences
 
     # did I hear my name?
-    if lingo.talking_to_me? || @audience.does_not_require_salutation?
-      puts "yay, you're talking to me!"
-    end
+    if @lingo.talking_to_me? || @audience.does_not_require_salutation?
+      puts "yay, you're talking to me"
 
-    @audience.speak_to(lingo.heard) unless lingo.heard.nil?
+      # did you ask me to do anything for you?
+      do_simple_commands
+
+      #@audience.speak_to(lingo.heard) unless lingo.heard.nil?
+    end
+  end
+
+  def do_simple_commands
+    @lingo.heard_these_words.each do |word|
+      if Configuration.invoke.has_key?(word)
+        sub = Object.const_get(Configuration.invoke[word]).new
+        puts sub.action
+      end
+    end
   end
 
   def command(input)
